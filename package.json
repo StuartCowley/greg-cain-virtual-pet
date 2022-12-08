@@ -1,0 +1,22 @@
+{
+  "name": "virtual-pet",
+  "version": "1.0.0",
+  "description": "virtual-pet project for manchester codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codegregcode/virtual-pet.git"
+  },
+  "author": "Greg Cain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codegregcode/virtual-pet/issues"
+  },
+  "homepage": "https://github.com/codegregcode/virtual-pet#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
