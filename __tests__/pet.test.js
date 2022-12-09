@@ -22,4 +22,18 @@ describe('growUp', () => {
         pet.growUp();
         expect(pet.age).toEqual(1);
     });
+    it('increments hunger by 5 for every 1 age', () => {
+        const pet2 = new Pet('Fido');
+        expect(pet2.hunger).toEqual(0);
+        pet2.growUp();
+        expect(pet2.hunger).toEqual(5);
+        pet2.growUp();
+        expect(pet2.hunger).toEqual(10);
+    })
+    it('decreases fitness by 3 for every 1 age', () => {
+        const pet3 = new Pet('Fido');
+        expect(pet3.fitness).toEqual(10);
+        pet3.growUp();
+        expect(pet3.fitness).toEqual(7)
+    })
 });
