@@ -34,6 +34,9 @@ describe('growUp', () => {
         const pet3 = new Pet('Fido');
         expect(pet3.fitness).toEqual(10);
         pet3.growUp();
-        expect(pet3.fitness).toEqual(7)
+        expect(pet3.fitness).toEqual(7);
+        pet3.growUp();
+        console.log(pet3);
+        expect(pet3.fitness).toEqual(4);
     })
 });
