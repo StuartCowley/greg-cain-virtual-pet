@@ -4,6 +4,13 @@ function Pet(name) {
     this.hunger = 0;
     this.fitness = 10;
 }
+
+Pet.prototype = {
+    get isAlive() {
+      return this.age < 30 && this.hunger < 10 && this.fitness > 0;
+    }
+}
+
 Pet.prototype.growUp = function() {
     const ADD_HUNGER = 5;
     const TAKE_FITNESS = 3;
