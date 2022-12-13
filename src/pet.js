@@ -23,6 +23,20 @@ Pet.prototype.feed = function () {
     const TAKE_HUNGER = 3;
     (this.hunger - TAKE_HUNGER) >= MIN_HUNGER ? this.hunger -= TAKE_HUNGER : this.hunger = MIN_HUNGER;
 }
+
+Pet.prototype.checkUp = function () {
+    const FIT_LEVEL = 3;
+    const HUNGER_LEVEL = 5;
+    if (this.fitness <= FIT_LEVEL && this.hunger >= HUNGER_LEVEL) {
+        return `I am hungry AND I need a walk`;
+    } else if (this.hunger >= HUNGER_LEVEL) {
+        return `I am hungry`;
+    } else if (this.fitness <= FIT_LEVEL) {
+        return `I need a walk`;
+    } else {
+        return `I feel great!`;
+    } 
+}
 ;
 
 module.exports = Pet;
