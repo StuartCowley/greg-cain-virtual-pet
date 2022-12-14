@@ -137,3 +137,13 @@ describe('isAlive', () => {
         expect(pet4.isAlive).toBe(true);
     });
 });
+
+describe('haveBaby', () => {
+    it('creates a baby of parent', () => {
+        const pet = new Pet ('Eärendil');
+        pet.haveBaby('Elrond');
+        expect(pet.children).toStrictEqual([{name: 'Elrond', age: 0, hunger: 0, fitness: 10, children:[]}]);
+        pet.haveBaby('Elros');
+        expect(pet.children).toStrictEqual([{name: 'Elrond', age: 0, hunger: 0, fitness: 10, children:[]}, {name: 'Elros', age: 0, hunger: 0, fitness: 10, children:[]}]);
+    })
+});
