@@ -147,3 +147,12 @@ describe('haveBaby', () => {
         expect(pet.children).toStrictEqual([{name: 'Elrond', age: 0, hunger: 0, fitness: 10, children:[]}, {name: 'Elros', age: 0, hunger: 0, fitness: 10, children:[]}]);
     })
 });
+
+describe('adoptChild', () => {
+    it('passes child into parent with adoptChild', () => {
+        const parent = new Pet ('Bilbo');
+        const child = new Pet ('Frodo');
+        parent.adoptChild(child);
+        expect(parent.children[0]).toBe(child);
+    });
+});
